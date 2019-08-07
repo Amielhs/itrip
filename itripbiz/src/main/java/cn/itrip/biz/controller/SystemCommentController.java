@@ -208,7 +208,6 @@ public class SystemCommentController {
             try{
 	            	fileCount = multiRequest.getFileMap().size();
 	           }catch (Exception e) {
-				// TODO: handle exception
 	        	   fileCount = 0;
 	               return DtoUtil.returnFail("文件大小超限","100009");
 	           }

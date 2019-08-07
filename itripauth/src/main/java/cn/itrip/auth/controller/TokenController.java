@@ -64,7 +64,6 @@ public class TokenController {
 					Calendar.getInstance().getTimeInMillis());			
 			return DtoUtil.returnDataSuccess(tokenVO);
 		} catch (TokenValidationFailedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return DtoUtil.returnFail(e.getMessage(), ErrorCode.AUTH_REPLACEMENT_FAILED);
 		}		

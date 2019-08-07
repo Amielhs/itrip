@@ -45,8 +45,7 @@ public class LoginController {
 		@ApiImplicitParam(paramType="form",required=true,value="密码",name="password",defaultValue="111111"),
 	})
 	@RequestMapping(value="/dologin",method= RequestMethod.POST,produces= "application/json")
-	public @ResponseBody
-    Dto dologin(
+	public @ResponseBody Dto dologin(
 //			@ApiParam(required = true, name = "name", value = "用户名",defaultValue="yao.liu2015@bdqn.cn")
 			@RequestParam
 			String name,
@@ -62,13 +61,11 @@ public class LoginController {
 			} catch (UserLoginFailedException e) {
 				return DtoUtil.returnFail(e.getMessage(), ErrorCode.AUTH_AUTHENTICATION_FAILED);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();				
 				return DtoUtil.returnFail(e.getMessage(), ErrorCode.AUTH_UNKNOWN);
 			}
 			if (EmptyUtils.isNotEmpty(user)) {
-				String token = tokenService.generateToken(
-						request.getHeader("user-agent"), user);
+				String token = tokenService.generateToken(request.getHeader("user-agent"), user);
 				tokenService.save(token, user);
 				
 				//返回ItripTokenVO

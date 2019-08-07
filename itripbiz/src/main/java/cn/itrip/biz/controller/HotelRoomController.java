@@ -23,16 +23,12 @@ import java.util.*;
 
 /**
  * 酒店房间Controller
- * <p/>
  * 包括API接口：
  * 1、根据入住时间，退房时间 等条件查询酒店房间列表
  * 2、根据type 和target id 查询酒店房间图片
  * 3、查询床型的接口
- * <p/>
- * <p/>
+ *
  * 注：错误码（100301 ——100400）
- * <p/>
- * Created by hanlu on 2017/5/9.
  */
 
 @Controller

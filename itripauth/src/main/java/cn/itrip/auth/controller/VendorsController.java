@@ -28,7 +28,7 @@ import java.util.Map;
 
 /**
  * 第三方登录控制器
- * @author hduser
+ * @author amielhs
  *
  */
 @Controller
@@ -50,7 +50,6 @@ public class VendorsController {
 		try {
 			response.sendRedirect(qrconnect);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -68,7 +68,6 @@ public class AliPaymentController {
 			}else
 				return "notfound";
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return "error";
 		}
@@ -134,10 +133,8 @@ public class AliPaymentController {
 			response.getWriter().flush();
 			response.getWriter().close();
 		} catch (AlipayApiException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -225,19 +222,15 @@ public class AliPaymentController {
 				response.getWriter().println("fail");
 			}
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e.getMessage());			
 		} catch (AlipayApiException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e.getMessage());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e.getMessage());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e.getMessage());
 		}
@@ -292,15 +285,12 @@ public class AliPaymentController {
 				response.sendRedirect(alipayConfig.getPaymentFailureUrl());
 			}
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e.getMessage());
 		} catch (AlipayApiException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e.getMessage());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e.getMessage());
 		}
